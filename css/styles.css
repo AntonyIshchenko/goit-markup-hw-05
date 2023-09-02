@@ -728,6 +728,8 @@ img {
   line-height: 1.5;
   text-transform: none;
   text-align: center;
+  color: var(--navyblue-color);
+  font-weight: var(--medium-font-weight);
   margin-bottom: 16px;
 }
 
@@ -742,7 +744,12 @@ img {
   margin-bottom: 8px;
 }
 
+.form-label-div-comment {
+  margin-bottom: 16px;
+}
+
 .form-label {
+  display: block;
   margin-bottom: 4px;
 
   color: var(--lightslate-color);
@@ -757,8 +764,9 @@ img {
 
 .form-input-icon {
   position: absolute;
-  top: 8px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
   fill: var(--navyblue-color);
 
   transition: fill var(--transition-duration) var(--transition-time-function);
@@ -769,19 +777,28 @@ img {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   width: 100%;
+  height: 40px;
   font-size: 14px;
+  background-color: transparent;
+  outline: transparent;
 
   transition: border-color var(--transition-duration) var(--transition-time-function);
 }
 
 .form-comment {
-  display: inline-block;
+  display: block;
+  width: 100%;
   max-height: 120px;
   resize: none;
-  padding: 11px 16px;
+  padding: 8x 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: var(--button-letter-spacing);
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
 
   transition: border-color var(--transition-duration) var(--transition-time-function);
 }
@@ -794,7 +811,7 @@ img {
   border-color: var(--iris-color);
 }
 
-.form-text-input:focus .form-input-icon {
+.form-text-input:focus + .form-input-icon {
   fill: var(--iris-color);
 }
 
@@ -809,7 +826,6 @@ img {
 }
 
 .form-terms {
-  margin-top: 16px;
   margin-bottom: 24px;
 }
 
@@ -832,7 +848,8 @@ img {
   fill: transparent;
 
   transition: background-color var(--transition-duration) var(--transition-time-function),
-    border var(--transition-duration) var(--transition-time-function);
+    border var(--transition-duration) var(--transition-time-function),
+    fill var(--transition-duration) var(--transition-time-function);
 }
 
 .form-checkbox-icon {
